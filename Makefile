@@ -1,7 +1,7 @@
 CC:=gcc
 LD:=$(CC)
 RC:=windres
-CFLAGS:=-g -Wall -Wextra -pedantic -std=c99 -O3
+CFLAGS:=-Wall -Wextra -pedantic -std=c99 -O3 -DUNICODE -D_UNICODE
 LDFLAGS:=-mwindows
 SOURCES:=binhexdec.c
 RESOURCE:=res.rc
