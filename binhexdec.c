@@ -96,7 +96,7 @@ static unsigned long int hex_to_n(const TCHAR *text)
     
     for(const TCHAR *p = &text[_tcslen(text) - 1]; p >= text; p--)
     {
-        int digit = (isdigit(*p)) ? (*p - '0') : (10 + *p - 'A');
+        int digit = (isdigit(*p)) ? (*p - '0') : (0xA + toupper(*p) - 'A');
         
         n |= digit << shift;
         shift += 4;
